@@ -17,7 +17,8 @@ namespace LucasHelpers.StringHelper
         /// <returns>the new string with his new number of chars.</returns>
         public static string MaxLength(this string str, int maxSize, string addToEnd ="")
         {
-            return str.Length <= maxSize ? str
+            return string.IsNullOrEmpty(str)?str
+                : str.Length <= maxSize ? str
                 : string.Format("{0}{1}", str.Substring(0, maxSize), addToEnd);
         }
     }

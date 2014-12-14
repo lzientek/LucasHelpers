@@ -9,11 +9,11 @@ namespace LucasHelpers.Wpf.Prompt
     /// <summary>
     /// Logique d'interaction pour Prompt2champ.xaml
     /// </summary>
-    public partial class Prompt2Champ 
+    public partial class PromptChamp 
     {
-        public Champ2 Champ { get; set; }
+        public Champ Champ { get; set; }
 
-        public Prompt2Champ(Champ2 c)
+        public PromptChamp(Champ c)
         {
             
 
@@ -26,7 +26,7 @@ namespace LucasHelpers.Wpf.Prompt
 
         private void Button_OnClick(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(Champ.TextUn) && Champ.Selected != null)
+            if (!string.IsNullOrWhiteSpace(Champ.TextUn) )
             {
                 OnValided();
                 Close();
@@ -49,5 +49,5 @@ namespace LucasHelpers.Wpf.Prompt
         }
     }
 
-    
+   
 }

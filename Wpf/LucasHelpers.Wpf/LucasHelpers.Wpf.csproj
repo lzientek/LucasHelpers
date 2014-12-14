@@ -47,8 +47,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Prompt\Prompt2champ.xaml.cs">
-      <DependentUpon>Prompt2champ.xaml</DependentUpon>
+    <Compile Include="Prompt\Champ.cs" />
+    <Compile Include="Prompt\Champ2.cs" />
+    <Compile Include="Prompt\Prompt2Champ.xaml.cs">
+      <DependentUpon>Prompt2Champ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prompt\PromptChamp.xaml.cs">
+      <DependentUpon>PromptChamp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -74,7 +79,11 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Prompt\Prompt2champ.xaml">
+    <Page Include="Prompt\Prompt2Champ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Prompt\PromptChamp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,6 +107,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
